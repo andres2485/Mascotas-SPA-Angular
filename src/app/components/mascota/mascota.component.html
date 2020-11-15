@@ -1,0 +1,35 @@
+<h1 class="animated fadeIn slow">{{mascota.nombre | uppercase}}</h1>
+<hr>
+
+
+<div class="row animated fadeIn slow">
+    <div class="col-md-4">
+
+        <img src="{{mascota.img}}" style="" class="img-fluid" [alt]="mascota.nombre">
+
+        <br><br>
+
+        <a class="btn btn-success btn-block" [routerLink]="['/mascotas']"> Regresar</a>
+
+
+    </div>
+
+
+    <div class="col-md-8">
+        <h3>{{mascota.nombre}}</h3>
+        <hr>
+        <p>{{mascota.bio}}</p>
+
+
+
+        <div>
+            <!--para indicar si es A o N-->
+            <h3>Perteneciente a :</h3>
+            <img *ngIf="mascota.casa == 'a'" src="assets/img/a.png" alt="">
+
+            <img *ngIf="mascota.casa == 'n'" src="assets/img/n.png" alt="">
+        </div>
+    </div>
+
+
+</div>

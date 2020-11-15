@@ -1,0 +1,31 @@
+<h1 class=" animated fadeIn slow" style="text-align: center;">Buscando : <small> {{  termino}}</small></h1>
+<hr>
+
+
+<div class="alert alert-dismissible alert-success animated fadeIn slow" *ngIf="mascotas.length==0">
+
+    No existen Resultados con el termino : {{termino}}
+</div>
+
+<div class="container animated fadeIn slow " style="margin-left: 80px;">
+    <div class="card mb-3 ml-3" style="width: 300px;float: left; margin-left: 5px;border: 2px solid #80FF00; " *ngFor="let mascota of mascotas , let i = index">
+        <h3 style="text-align: center;" class="card-header">{{mascota.nombre}}</h3>
+        <div class="card-body">
+
+        </div>
+        <img src="{{mascota.img}}" width="296" alt="">
+        <!--o puede ser [src]="mascota.png"-->
+
+
+
+        <div class="card-body">
+            <p class="card-text" style="text-align: center;">{{mascota.bio}}</p>
+
+            <!--  <button (click)="verMascota(i)" type="button" class="btn btn-success btn-block" [routerLink]="['/mascota/id']">Ver Mas</button>-->
+
+            <!-- <a class="btn btn-primary" [routerLink]="['/mascota',i]"> ir a ver</a>
+            este es otro metodo que sirve para ir a info-->
+        </div>
+
+
+    </div>

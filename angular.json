@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "repaso6"
+    }
+  },
+  "defaultProject": "repaso6",
+  "cli": {
+    "analytics": false
+  }
 }
